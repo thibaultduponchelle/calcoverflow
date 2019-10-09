@@ -6,7 +6,7 @@ class Question(models.Model):
     title = models.CharField(max_length=200)
     content = models.CharField(max_length=1600)
     author = models.ForeignKey(User)
-    is_resolved = models.BooleanField()
+    #is_resolved = models.BooleanField()
     votes = models.IntegerField()
     pub_date = models.DateTimeField('date published')
 
@@ -16,7 +16,7 @@ class Question(models.Model):
 class Answer(models.Model):
     content = models.CharField(max_length=1600)
     author = models.ForeignKey(User)
-    is_resolver = models.BooleanField()
+    #is_resolved = models.BooleanField()
     votes = models.IntegerField()
     pub_date = models.DateTimeField('date published')
     question = models.ForeignKey(Question)
