@@ -1,0 +1,42 @@
+.users {
+  background-color: #e7e7e7;
+  font-size: 100%;
+  margin: 12px;
+  min-width: 150px;
+  min-height: 55px;
+  text-align: left;
+  padding: 10px;
+  border-radius: 19px;
+  -moz-border-radius: 19px;
+  -webkit-border-radius: 19px;
+  float: left;
+}
+
+.users a{
+  padding-left: 10px;
+  color: blue;
+  text-decoration: none;
+  font-weight: bold;
+}
+.users a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+.medal-count {
+  padding-left: 20px;
+}
+
+
+.user {
+  background-color: #e7e7e7;
+  width: 95%;
+  font-size: 100%;
+  margin: 12px;
+  text-align: left;
+  padding: 10px;
+  border-radius: 19px;
+  -moz-border-radius: 19px;
+  -webkit-border-radius: 19px;
+  float: left;
+}

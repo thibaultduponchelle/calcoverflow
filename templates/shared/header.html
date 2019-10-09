@@ -1,0 +1,49 @@
+<!-- <div id="header"> -->
+<div id="topbar">
+  <div id="hlinks">
+    {% if user.is_authenticated %}
+      <span id="current-user">
+        Logged as {{ user.username }}
+      </span><span class="lsep">|</span>
+      <a href="/users/logout/" class="link-logout">logout</a>
+    {% else %}
+      <a href="/users/login/" class="link-login">login</a>
+    {% endif %}
+    <span class="lsep">|</span><a href="/about/">about</a><span class="lsep">|</span><a href="/faq/">faq</a><span class="lsep">|</span><a href="/help/">help</a> 
+  </div>
+</div>
+<div id="hlogo">
+  <a href="/">Calc Overflow</a>
+</div> 
+<div id="hmenus">
+  <div class="nav mainnavs">
+    <ul>
+      <li>
+        <a id="nav-questions" href="/questions">Questions</a>
+      </li>
+      <li>
+        <a id="nav-tags" href="/tags">Tags</a>
+      </li>
+      <li>
+        <a id="nav-users" href="/users">Users</a>
+      </li>
+      <li>
+        <a id="nav-badges" href="/badges">Badges</a>
+      </li>
+      <li>
+        <a id="nav-unanswered" href="/unanswered">Unanswered</a>
+      </li>
+    </ul>
+  </div>
+  <div class="nav askquestion">
+    <ul>
+      <li>
+        <a id="nav-askquestion" href="/questions/ask">Ask Question</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- </div> -->
+
+
+		

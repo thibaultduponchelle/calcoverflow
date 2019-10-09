@@ -1,0 +1,27 @@
+{% extends 'home.html' %}
+
+{% block css.custom %}
+<script type="text/javascript" src="/static/matheditor/pagedown/Markdown.Converter.js"></script>
+<script type="text/javascript" src="/static/matheditor/pagedown/Markdown.Sanitizer.js"></script>
+<script type="text/javascript" src="/static/matheditor/pagedown/Markdown.Editor.js"></script>
+<!-- markitup ! -->
+<link rel="stylesheet" type="text/css" href="/static/markitup/skins/markitup/style.css" />
+<link rel="stylesheet" type="text/css" href="/static/markitup/sets/markdown/style.css" />
+{% endblock css.custom %}
+
+{% block js.custom %}
+<script type="text/javascript" src="/static/js/jquery.js"></script>
+<script type="text/javascript" src="/static/markitup/jquery.markitup.js"></script>
+<script type="text/javascript" src="/static/markitup/sets/markdown/set.js"></script>
+<script type="text/javascript" src="/static/markitup/plug.js"></script>
+{% endblock js.custom %}
+
+{% block 2 %}
+<div id="content">
+  <div class="your-question"> Your question </div>
+  <hr class="thin-line"/>
+  <form action="/questions/ask/post/" method="post">{% csrf_token %}
+  {{ form.as_table }}
+  <input type="submit" value="Submit" />
+</div>
+{% endblock 2 %}

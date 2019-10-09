@@ -1,0 +1,11 @@
+{% extends "home.html" %}
+
+{% block 2 %}
+
+{% if account %}
+<p>{% trans "Account successfully activated" %}</p>
+{% else %}
+<p>Account activation failed</p>
+{% endif %}
+
+{% endblock 2 %}

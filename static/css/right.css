@@ -1,0 +1,9 @@
+.rightcontent {
+  width: 21%;
+  background-color: #f9f9f9;
+  /*border: 1px dashed red;*/
+  float: left;
+  margin: 1%;
+  min-height: 300px;
+  float: left;
+}

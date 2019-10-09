@@ -1,0 +1,43 @@
+#footer {
+  background: none repeat scroll 0 0 #AAAAAA;
+  bottom: 0px;
+  height: 100px;
+  width: 100%;
+  border-top:7px solid red;
+}
+
+#footer .lsep {
+  color: red;
+  font-size: 90%;
+}
+
+.footerwrap {
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  height: 70px;
+}
+
+.footermenu {
+  text-align: center;
+}
+
+.footermenu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.footermenu a:hover {
+  color: white;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.copyright {
+  padding-top: 30px;
+  text-align: center;
+  color: #777;
+  font-size: 90%;
+}
+

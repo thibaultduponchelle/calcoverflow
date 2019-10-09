@@ -1,0 +1,87 @@
+{% block layout.base %}
+{% block doctype %}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">{% endblock doctype %}
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+{% block head %}
+<head>
+	{% block meta %}
+  <meta http-equiv="content-type" content="{% block meta.content-type %}text/html;charset=UTF-8{% endblock meta.content-type %}" />
+	<meta name="description" content="{% block meta.description %}{% endblock meta.description %}" />
+	<meta name="keywords" content="{% block meta.keywords %}{% endblock meta.keywords %}" />
+	{% endblock meta %}
+	
+    <title>{% block title %}{% endblock title %}</title>
+	
+	{% block css %}
+    {% block css.shared %}
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.6.0/build/cssreset/cssreset-min.css">
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.5.2/build/reset-fonts-grids/reset-fonts-grids.css" />
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.5.2/build/base/base-min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/nostyle.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/header.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/left.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/content.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/right.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/footer.css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/badge.css" />
+    {% endblock css.shared %}
+
+    {% block css.custom %}
+    <!--
+    <link rel="stylesheet" type="text/css" href="/static/matheditor/matheditor.css" />
+    <link rel="stylesheet" href="/static/matheditor/free-online-latex-equation-editor_files/foleef.css" type="text/css" />
+    <script type="text/javascript" src="/static/matheditor/pagedown/Markdown.Converter.js"></script>
+    <script type="text/javascript" src="/static/matheditor/pagedown/Markdown.Sanitizer.js"></script>
+    <script type="text/javascript" src="/static/matheditor/pagedown/Markdown.Editor.js"></script> -->
+    <!-- markitup ! -->
+    <!--<link rel="stylesheet" type="text/css" href="/static/markitup/skins/markitup/style.css" />
+    <link rel="stylesheet" type="text/css" href="/static/markitup/sets/markdown/style.css" /> -->
+    {% endblock css.custom %}
+	{% endblock css%}
+	
+	{% block js %}
+    {% block js.shared %}{% endblock js.shared %}
+    {% block js.custom %}
+    <!-- markitup ! -->
+    <!--<script type="text/javascript" src="/static/js/jquery.js"></script>
+    <script type="text/javascript" src="/static/markitup/jquery.markitup.js"></script>
+    <script type="text/javascript" src="/static/markitup/sets/markdown/set.js"></script>
+    <script type="text/javascript" src="/static/markitup/plug.js"></script> -->
+    {% endblock js.custom %}
+	{% endblock js%}
+</head>
+{% endblock head %}
+
+<body{% block bodyonload %}{% endblock bodyonload %}>
+    <div {% block yahooui %}{% endblock yahooui %}>
+		{% block header %}
+	  	<!-- BEGIN header -->
+      <div id="header">
+        {% block header_content %}{% include 'shared/header.html' %}{% endblock header_content %}
+      </div>
+      <!-- END header -->
+		{% endblock header %}
+
+    <div style="clear:both"></div>
+		
+		{% block body %}
+      <!-- BEGIN body -->
+      <div id="body">
+          {% block body_content %}{% endblock body_content %}
+      </div>
+      <!-- END body -->
+		{% endblock body %}
+
+    <div style="clear:both"></div>
+		
+		{% block footer %}
+		<!-- BEGIN footer -->
+        <div id="footer">
+            {% block footer_content %}{% include 'shared/footer.html' %}{% endblock footer_content %}
+        </div>
+        <!-- END footer -->
+		{% endblock footer %}
+    </div>
+</body>
+</html>
+{% endblock layout.base %}

@@ -1,0 +1,88 @@
+.legend {
+  text-align: left;
+}
+
+h1 {
+  text-align: left;
+}
+
+.badge-disclaimer {
+  text-align: left;
+  font-size: 110%;
+  padding-top: 20px;
+  margin-bottom: 40px;
+  color: #444444;
+}
+
+
+.badge-name {
+  background-color: #222;
+  color: white;
+  padding : 6px;
+  margin-left: 40px;
+  margin-bottom: 10px;
+  margin-right: 30px;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px; 
+  float:left;
+}
+
+.badge-description {
+  position: absolute;
+  margin-left: 250px;
+  padding : 6px;
+  float:left;
+
+}
+
+#badge a {
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
+#badge a:hover {
+  background-color: red;
+}
+
+.medal-gold {
+  margin : 4px;
+  width: 10px;
+  height: 10px;
+  background: #CEC328;
+  -moz-border-radius: 100px ; 
+  -webkit-border-radius: 100px ; 
+  -khtml-border-radius: 100px ; 
+  border-radius: 100px ; 
+  float:left;
+}
+
+.medal-silver {
+  margin : 4px;
+  width: 10px;
+  height: 10px;
+  background: #A18A79;
+  -moz-border-radius: 100px ; 
+  -webkit-border-radius: 100px ; 
+  -khtml-border-radius: 100px ; 
+  border-radius: 100px ; 
+  float:left;
+}
+
+.medal-bronze {
+  margin : 4px;
+  width: 10px;
+  height: 10px;
+  background: #904B16;
+  -moz-border-radius: 100px ; 
+  -webkit-border-radius: 100px ; 
+  -khtml-border-radius: 100px ; 
+  border-radius: 100px ; 
+  float:left;
+}
+
+.medal-legend {
+  padding: 10px;
+}

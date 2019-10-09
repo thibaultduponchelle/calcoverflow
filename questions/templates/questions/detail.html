@@ -1,0 +1,76 @@
+{% extends 'home.html' %}
+
+{% block css.custom %}
+<!-- markitup ! -->
+<link rel="stylesheet" type="text/css" href="/static/markitup/skins/markitup/style.css" />
+<link rel="stylesheet" type="text/css" href="/static/markitup/sets/markdown/style.css" />
+{% endblock css.custom %}
+
+{% block js.custom %}
+<script type="text/javascript" src="/static/matheditor/pagedown/Markdown.Converter.js"></script>
+<script type="text/javascript" src="/static/matheditor/pagedown/Markdown.Sanitizer.js"></script>
+<script type="text/javascript" src="/static/matheditor/pagedown/Markdown.Editor.js"></script>
+<!-- markitup ! -->
+<script type="text/javascript" src="/static/js/jquery.js"></script>
+<script type="text/javascript" src="/static/markitup/jquery.markitup.js"></script>
+<script type="text/javascript" src="/static/markitup/sets/markdown/set.js"></script>
+<script type="text/javascript" src="/static/markitup/plug.js"></script>
+{% endblock js.custom %}
+
+{% block 2 %}
+<div id="content">
+  <h1 class="question-title"> <a href="/questions/{{ question.id }}/"> {{ question.title }} </a></h1>
+  <table class="table-wrapper" >
+    <tbody>
+      <tr>
+        <td class="votecell">
+          <a class="vote-up" href="/questions/">Vote up</a>
+          <div class="vote-count-post"> {{ question.votes }}</div>
+          <a class="vote-down" onclick="alert('toto');">Vote down</a>
+        <td class="postcell"> 
+          <div class="post-text">
+            {{ question.content|safe }}
+          </div>
+          <div class="question-detail-meta-infos"> Posted by <a href="/users/{{ question.user.id }}/">{{ question.user.first_name }} {{ question.user.last_name }}</a></div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  {% for answer in answers %} 
+  <hr class="thin-line"/>
+  <table class="table-wrapper">
+    <tbody>
+      <tr>
+        <td class="votecell">
+          <a class="vote-up" href="/questions/">Vote up</a>
+          <div class="vote-count-post"> {{ question.votes }}</div>
+          <a class="vote-down" onclick="alert('toto');">Vote down</a>
+        <td class="postcell"> 
+          <div class="post-text">
+            {{ answer.content|safe }}
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <div class="question-detail-meta-infos"> Posted by <a href="/users/{{ answer.user.id }}/">{{ answer.user.first_name }} {{ answer.user.last_name }}</a></div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  {% endfor %}
+  <hr class="thin-line"/>
+  <div class="your-answer"> Your answer </div>
+  <form action="/questions/{{ question.id }}/answer/" method="post">{% csrf_token %}
+  {{ form.as_table }}
+  <input type="submit" value="Submit" />
+
+  <!--<textarea id="markdown" cols="80" rows="20"></textarea> -->
+  {# include 'matheditor/matheditor.html' #}
+  {# include 'matheditor/pagedown.html' #}
+  
+
+
+</div>
+{% endblock 2 %}

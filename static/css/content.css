@@ -1,0 +1,138 @@
+.content {
+  width: 50%;
+  margin: 1%;
+  float: left;
+  min-height:498px;
+  float: left;
+  /*border: 1px dashed red;*/
+}
+
+.content #question-mini-list {
+
+}
+
+.question-summary {
+  border-top: 1pt dotted #b7b7b7;
+  min-height: 30px;
+  margin: 5px;
+}
+
+.summary {
+  width: 70%;
+  margin: 5px;
+  padding-top: 1px;
+  padding-left: 4px;
+  float: left;
+}
+.question-summary-title {
+  text-align: left;
+  float: left;
+}
+
+.question-meta-infos {
+  padding-top: 10px;
+  float: right;
+}
+
+.question-summary-title a {
+  color: #3594F3;
+  font-weight: bold;
+  font-size: 115%;
+  text-decoration: none;
+}
+
+
+.question-summary-title a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.mini-count {
+  font-size: 170%;
+  font-weight: bold;
+  height: 25px;
+}
+
+.votes {
+  float: left;
+  /*background-color: #99ff99; */
+  padding: 1px;
+  height: 50px;
+  width: 50px;
+  margin: 1px;
+  color: #444;
+}
+
+.votes div {
+  padding-top: 5px;
+}
+
+.answers-yes {
+  float: left;
+  /*background-color: #77aabb;*/
+  padding: 1px;
+  height: 50px;
+  width: 50px;
+  margin: 1px;
+  color: white;
+  background-color: #227722; 
+}
+
+.answers-yes div {
+  padding-top: 5px;
+}
+
+.answers-no {
+  float: left;
+  /*background-color: #77aabb;*/
+  padding: 1px;
+  height: 50px;
+  width: 50px;
+  margin: 1px;
+  color: #DD0000;
+}
+
+.answers-no div {
+  padding-top: 5px;
+}
+
+.views {
+  float: left;
+  /*background-color: #444;*/
+  padding: 1px;
+  height: 50px;
+  width: 50px;
+  margin: 1px;
+  color: #b7b7b7;
+}
+
+.views div {
+  padding-top: 5px;
+}
+
+
+.question-title a { 
+  text-align: left;
+  color: #3594F3;
+  font-weight: bold;
+  font-size: 115%;
+  text-decoration: none;
+}
+
+.question-title a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.question-meta-infos a {
+  color: #3594F3;
+  font-weight: bold;
+  font-size: 115%;
+  text-decoration: none;
+}
+
+
+.question-meta-infos a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}

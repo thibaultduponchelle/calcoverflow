@@ -1,0 +1,32 @@
+<div class="wmd-panel">
+  <div id="wmd-button-bar"> </div>
+    <div id="wmd-button-row" class="wmd-button-row"> </div>
+    <textarea name="input" class="wmd-input" cols="80" rows="12" id="wmd-input"> </textarea>
+</div>
+<div id="wmd-preview" class="wmd-preview"></div>
+  <script type="text/javascript">
+    (function () {
+
+
+        var converter = new Markdown.Converter();
+
+        converter.hooks.chain("preConversion", function (text) {
+            return text.replace(/\b(a\w*)/gi, "*$1*");
+        });
+
+
+        converter.hooks.chain("plainLinkText", function (url) {
+            return "This is a link to " + url.replace(/^https?:\/\//, "");
+        });
+
+
+        var help = function () { alert("Do you need help?"); }
+
+        var editor = new Markdown.Editor(converter, "", { handler: help });
+
+        editor.run();
+    })();
+  </script>
+</div>
+
+    
