@@ -73,7 +73,7 @@ def post_answer(request, question_id):
     return detail(request, question_id)
 
 
-#@login_required
+@login_required
 def ask_question(request):
     form = QuestionForm(auto_id=False)
     template = loader.get_template('questions/ask.html')

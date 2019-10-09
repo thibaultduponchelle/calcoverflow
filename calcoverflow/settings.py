@@ -150,6 +150,7 @@ INSTALLED_APPS = (
     'questions',
     'users',
     'badges',
+    'django_registration',
     #'registration',
 )
 
