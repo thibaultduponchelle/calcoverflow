@@ -1,5 +1,8 @@
 # Django settings for calcoverflow project.
 
+import os
+here = os.path.dirname(__file__)
+
 DEBUG = True
 
 ADMINS = (
@@ -23,7 +26,7 @@ DATABASES = {
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
 # In a Windows environment this must be set to your system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'Europe/Paris'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -63,7 +66,7 @@ STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    '/home/anybody/perso/calcoverflow_0.36/static/', 
+    'static/', 
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -74,25 +77,16 @@ STATICFILES_DIRS = (
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '6o4zs0y+az^hi_72uruw=ckf$52$sb@d88i9s^#e0-87n43*(!'
 
-# List of callables that know how to import templates from various sources.
-#TEMPLATE_LOADERS = (
-#    'django.template.loaders.filesystem.Loader',
-#    'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
-#)
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [ '/home/anybody/perso/calcoverflow_0.36/templates' ],
+        'DIRS': [ 'templates/' ],
         'APP_DIRS': True,
-        #'TEMPLATE_DEBUG' : 'DEBUG',
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -103,11 +97,6 @@ TEMPLATES = [
         },
     },
 ]
-
-
-#TEMPLATE_CONTEXT_PROCESSORS = (
-#'django.core.context_processors.request',
-#'django.contrib.auth.context_processors.auth',)
 
 
 MIDDLEWARE_CLASSES = (
@@ -142,6 +131,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'registration',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
@@ -150,8 +140,7 @@ INSTALLED_APPS = (
     'questions',
     'users',
     'badges',
-    'django_registration',
-    #'registration',
+    #'django_registration',
 )
 
 # A sample logging configuration. The only tangible logging
