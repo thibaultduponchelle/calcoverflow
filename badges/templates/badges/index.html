@@ -4,7 +4,7 @@
 {% endblock css.custon %}
 <link rel="stylesheet" type="text/css" href="/static/css/badge.css" />
 
-{% block 3 %}
+{% block side %}
 <div class="legend">
 <h1>Legend</h1>
 <hr class="thin-line"/>
@@ -31,10 +31,9 @@ Bronze badges are awarded for basic use of Stack Overflow. They are easy to earn
 <hr class="thin-line"/>
 <div style="clear:both"></div>
 </div>
+{% endblock side %}
 
-{% endblock %}
-
-{% block 2 %}
+{% block main %}
 <div id="content">
   <h1>Badges</h1>
   <hr class="thin-line"/>
@@ -55,4 +54,4 @@ Bronze badges are awarded for basic use of Stack Overflow. They are easy to earn
   {% endif %}
   </div>
 </div>
-{% endblock 2 %}
+{% endblock main %}

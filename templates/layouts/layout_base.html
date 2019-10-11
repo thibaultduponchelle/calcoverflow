@@ -3,15 +3,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 {% block head %}
 <head>
-	{% block meta %}
-  <meta http-equiv="content-type" content="{% block meta.content-type %}text/html;charset=UTF-8{% endblock meta.content-type %}" />
-	<meta name="description" content="{% block meta.description %}{% endblock meta.description %}" />
-	<meta name="keywords" content="{% block meta.keywords %}{% endblock meta.keywords %}" />
-	{% endblock meta %}
+    {% block meta %}
+    <meta http-equiv="content-type" content="{% block meta.content-type %}text/html;charset=UTF-8{% endblock meta.content-type %}" />
+    <meta name="description" content="{% block meta.description %}{% endblock meta.description %}" />
+    <meta name="keywords" content="{% block meta.keywords %}{% endblock meta.keywords %}" />
+    {% endblock meta %}
 	
     <title>{% block title %}{% endblock title %}</title>
 	
-	{% block css %}
+    {% block css %}
     {% block css.shared %}
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.6.0/build/cssreset/cssreset-min.css">
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.5.2/build/reset-fonts-grids/reset-fonts-grids.css" />
@@ -37,9 +37,9 @@
     <!--<link rel="stylesheet" type="text/css" href="/static/markitup/skins/markitup/style.css" />
     <link rel="stylesheet" type="text/css" href="/static/markitup/sets/markdown/style.css" /> -->
     {% endblock css.custom %}
-	{% endblock css%}
+    {% endblock css%}
 	
-	{% block js %}
+    {% block js %}
     {% block js.shared %}{% endblock js.shared %}
     {% block js.custom %}
     <!-- markitup ! -->
@@ -54,9 +54,9 @@
 
 <body{% block bodyonload %}{% endblock bodyonload %}>
     <div {% block yahooui %}{% endblock yahooui %}>
-		{% block header %}
-	  	<!-- BEGIN header -->
-      <div id="header">
+	{% block header %}
+  	<!-- BEGIN header -->
+    <div id="header">
         {% block header_content %}{% include 'shared/header.html' %}{% endblock header_content %}
       </div>
       <!-- END header -->

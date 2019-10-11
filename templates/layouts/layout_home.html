@@ -15,6 +15,7 @@
   {% block css.shared %}
   <link rel="stylesheet" type="text/css" href="/static/css/knacss.css" />
   <link rel="stylesheet" type="text/css" href="/static/css/header.css" />
+  <link rel="stylesheet" type="text/css" href="/static/css/table.css" />
 
   <!--<link rel="stylesheet" type="text/css" href="/static/css/nostyle.css" />
   <link rel="stylesheet" type="text/css" href="/static/css/all.css" />
@@ -39,7 +40,6 @@
 {% endblock head %}
 
 <body{% block bodyonload %}{% endblock bodyonload %}>
-  <div {% block yahooui %}{% endblock yahooui %}>
   {% block header %}
   <!-- BEGIN header -->
   <div id="header">
@@ -48,14 +48,15 @@
   <!-- END header -->
   {% endblock header %}
 
+  {% block navigation_content %}{% include 'shared/navigation.html' %}{% endblock navigation_content %}
+
   {% block body %}
   <!-- BEGIN body -->
   <div id="body">
     <section class="grid-4">	  
-      <div class="col-3">
-    {% block body_content %}{% endblock body_content %}
-      </div>
-      <div>4</div>
+      <div></div>
+      <div class="col-2">{% block body_content %}{% endblock body_content %}</div>
+      <div>{% block side_content %}{% endblock side_content %}</div>
   </div>
   <!-- END body -->
   {% endblock body %}

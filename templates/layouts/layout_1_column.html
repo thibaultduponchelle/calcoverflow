@@ -1,7 +1,9 @@
 {% extends 'layout_overrides.html' %}
 {% block body_content %}
-      <div class="content">
-        {% block main %}
-        {% endblock main %}
-      </div>
+  {% block main %}
+  {% endblock main %}
 {% endblock body_content %} 
+{% block side_content %}
+  {% block side %}
+  {% endblock side %}
+{% endblock side_content %} 
