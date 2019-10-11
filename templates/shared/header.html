@@ -1,14 +1,15 @@
 <!-- <div id="header"> -->
-<div class="flex-container topbar">
-  <span class="item-fluid">(-(-_(-_-)_-)-)</span>
-  <div class="w33">
-    {% if user.is_authenticated %}
-      <span id="current-user">Logged as {{ user.username }}</span>
-      <span class="lsep">  |  </span>
-      <a href="/accounts/logout/" class="link-logout">logout</a>
-    {% else %}
-      <a href="/accounts/login/" class="link-login">login</a>
-    {% endif %}
+<div class="row topbar">
+  <div class="col-4">(-(-_(-_-)_-)-)</div>
+  <div class="col-4"></div>
+  <div class="col-4">
+  {% if user.is_authenticated %}
+    <span id="current-user">Logged as {{ user.username }}</span>
+    <span class="lsep">  |  </span>
+    <a href="/accounts/logout/" class="link-logout">logout</a>
+  {% else %}
+    <a href="/accounts/login/" class="link-login">login</a>
+  {% endif %}
     <span class="lsep">  |  </span><a href="/about/">about</a><span class="lsep">  |  </span><a href="/faq/">faq</a><span class="lsep">  |  </span><a href="/help/">help</a> 
   </div>
 </div>
