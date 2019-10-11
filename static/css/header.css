@@ -3,125 +3,22 @@
   padding-bottom: 30px;
 }
 
-#topbar {
-  left: 0px;
+.topbar {
+  /*left: 0px;
   top: 0px;
   right: 0px;
-  background-color: #ebebeb;
-  border-bottom: 3px solid red;
+  */background-color: #ebebeb;
+  /*background-color: #aeeaf3;*/
+  /*background-color: #d2f7fd;*/
+  padding-bottom: 3px;
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
 }
 
-#hlogo {
-  background:url(/static/img/calcoverflow.png) 0 0;
-  background-repeat: no-repeat;
-  height: 79px;
-  width: 100px;
-  margin-left: 20%;
-  float: left;
-}
-
-#hlogo a {
-  display: none;
-}
-
-
-#hmenus {
+.hmenus {
   width:705px;
   padding:14px 10% 0px 0px;
   margin-top: 20px;
   float:right;
 }
-
-#hname {
-  font-size: 110%;
-  color: black;
-}
-
-#current-user {
-  color: #227799;
-  font-weight: bold;
-  font-size: 110%;
-  margin-right: 20px;
-  border-left: 1px solid red;
-  border-top: 1px solid red;
-  border-bottom: 2px solid red;
-  border-right: 2px solid red;
-  padding-right: 4px;
-  padding-left: 8px;
-    
-}
-
-#hlinks {
-  margin-left: 55%;
-  padding-bottom: 4px;
-}
-
-#hlinks a:link {
-  font-weight: bold;
-  text-decoration: none; 
-  color:#4477EE;
-  font-size: 100%;
-}
-
-#hlinks a:hover {
-  font-weight: bold;
-  text-decoration: underline; 
-  font-size: 100%;
-}
-
-#hlinks a[class="link-login"]:link {
-  font-weight: bold;
-  text-decoration: none; 
-  color:#33dd77;
-  font-size: 100%;
-}
-
-#hlinks a[class="link-logout"]:hover {
-  font-weight: bold;
-  color:#ee9933;
-  text-decoration: underline; 
-  font-size: 100%;
-}
-
-.nav {
-  float:left;
-  font-size:110%;
-}
-.nav ul {
-  margin:0;
-}
-.nav li {
-  background:#777777;
-  display:block;
-  float:left;
-  margin-right:7px;
-}
-.nav a {
-  color:#fff;
-  display:block;
-  font-weight:bold;
-  padding:6px 12px 6px 12px;
-  text-decoration:none;
-}
-
-.nav a:hover {
-  color: #666;
-  background-color: #ddd;
-}
-
-.askquestion{
-  float:right;
-}
-
-#nav-askquestion{
-  margin-right:0px;
-}
-
-#thin-line {
-  border: 0;
-  width: 80%;
-  color: #eee;
-}
-
-  
 

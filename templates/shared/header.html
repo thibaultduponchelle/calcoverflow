@@ -1,49 +1,25 @@
 <!-- <div id="header"> -->
-<div id="topbar">
-  <div id="hlinks">
+<div class="flex-container topbar">
+  <span class="item-fluid">(-(-_(-_-)_-)-)</span>
+  <div class="w33">
     {% if user.is_authenticated %}
       <span id="current-user">
         Logged as {{ user.username }}
-      </span><span class="lsep">|</span>
+      </span>
+      <span class="lsep">  |  </span>
       <a href="/accounts/logout/" class="link-logout">logout</a>
     {% else %}
       <a href="/accounts/login/" class="link-login">login</a>
     {% endif %}
-    <span class="lsep">|</span><a href="/about/">about</a><span class="lsep">|</span><a href="/faq/">faq</a><span class="lsep">|</span><a href="/help/">help</a> 
+    <span class="lsep">  |  </span><a href="/about/">about</a><span class="lsep">  |  </span><a href="/faq/">faq</a><span class="lsep">  |  </span><a href="/help/">help</a> 
   </div>
 </div>
-<div id="hlogo">
-  <a href="/">Calc Overflow</a>
-</div> 
-<div id="hmenus">
-  <div class="nav mainnavs">
-    <ul>
-      <li>
-        <a id="nav-questions" href="/questions">Questions</a>
-      </li>
-      <li>
-        <a id="nav-tags" href="/tags">Tags</a>
-      </li>
-      <li>
-        <a id="nav-users" href="/users">Users</a>
-      </li>
-      <li>
-        <a id="nav-badges" href="/badges">Badges</a>
-      </li>
-      <li>
-        <a id="nav-unanswered" href="/unanswered">Unanswered</a>
-      </li>
-    </ul>
-  </div>
-  <div class="nav askquestion">
-    <ul>
-      <li>
-        <a id="nav-askquestion" href="/questions/ask">Ask Question</a>
-      </li>
-    </ul>
-  </div>
+<div class="flex-container topbar">
+  <div class="txtcenter">
+    <a href="/questions"><span class="btn--primary" role="button">Questions</span></a>
+    <a href="/users"><span class="btn--success" role="button">Users</span></a>
+    <a href="/badges"><span class="btn--warning" role="button">Badges</span></a>
+    <a href="/unanswered"><span class="btn--info" role="button">Unanswered</span></a>
+    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <a href="/questions/ask"><span class="btn--inverse" role="button">Ask a question</span></a>
 </div>
-<!-- </div> -->
-
-
-		

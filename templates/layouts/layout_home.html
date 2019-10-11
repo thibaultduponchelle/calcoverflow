@@ -1,0 +1,75 @@
+{% block layout.home %}
+{% block doctype %}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">{% endblock doctype %}
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+{% block head %}
+<head>
+  {% block meta %}
+  <meta http-equiv="content-type" content="{% block meta.content-type %}text/html;charset=UTF-8{% endblock meta.content-type %}" />
+  <meta name="description" content="{% block meta.description %}{% endblock meta.description %}" />
+  <meta name="keywords" content="{% block meta.keywords %}{% endblock meta.keywords %}" />
+  {% endblock meta %}
+	
+  <title>{% block title %}{% endblock title %}</title>
+	
+  {% block css %}
+  {% block css.shared %}
+  <link rel="stylesheet" type="text/css" href="/static/css/knacss.css" />
+  <link rel="stylesheet" type="text/css" href="/static/css/header.css" />
+
+  <!--<link rel="stylesheet" type="text/css" href="/static/css/nostyle.css" />
+  <link rel="stylesheet" type="text/css" href="/static/css/all.css" />
+  <link rel="stylesheet" type="text/css" href="/static/css/left.css" />
+  <link rel="stylesheet" type="text/css" href="/static/css/content.css" />
+  <link rel="stylesheet" type="text/css" href="/static/css/right.css" />
+  <link rel="stylesheet" type="text/css" href="/static/css/footer.css" />
+  <link rel="stylesheet" type="text/css" href="/static/css/badge.css" />
+  -->
+  {% endblock css.shared %}
+
+  {% block css.custom %}
+  {% endblock css.custom %}
+  {% endblock css%}
+
+  {% block js %}
+  {% block js.shared %}{% endblock js.shared %}
+  {% block js.custom %}
+  {% endblock js.custom %}
+  {% endblock js%}
+</head>
+{% endblock head %}
+
+<body{% block bodyonload %}{% endblock bodyonload %}>
+  <div {% block yahooui %}{% endblock yahooui %}>
+  {% block header %}
+  <!-- BEGIN header -->
+  <div id="header">
+    {% block header_content %}{% include 'shared/header.html' %}{% endblock header_content %}
+  </div>
+  <!-- END header -->
+  {% endblock header %}
+
+  {% block body %}
+  <!-- BEGIN body -->
+  <div id="body">
+    <section class="grid-4">	  
+      <div class="col-3">
+    {% block body_content %}{% endblock body_content %}
+      </div>
+      <div>4</div>
+  </div>
+  <!-- END body -->
+  {% endblock body %}
+
+  <div style="clear:both"></div>
+
+  {% block footer %}
+  <!-- BEGIN footer -->
+  <div id="footer">
+  {% block footer_content %}{# include 'shared/footer.html' #}{% endblock footer_content %}
+  </div>
+  <!-- END footer -->
+  {% endblock footer %}
+  </div>
+</body>
+</html>
+{% endblock layout.home %}
