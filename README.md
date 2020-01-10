@@ -15,7 +15,7 @@ source ~/Django1.11.25/bin/activate
 pip install Django==1.11.25
 pip install django-registration
 pip install pymysql
-sudo apt-get install default-libmysqlclient-dev libmysqlclient-dev libmysqlclient20 python-mysqldb
+sudo apt-get install default-libmysqlclient-dev libmysqlclient-dev libmysqlclient20 python-mysqldb mysql-client-core-5.7
 su 
 mysql -u root -p
 (Do not type anything)
