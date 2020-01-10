@@ -19,7 +19,8 @@ pip install pymysql
 sudo apt-get install default-libmysqlclient-dev libmysqlclient-dev libmysqlclient20 python-mysqldb mysql-client-core-5.7 mysql-server 
 su 
 mysql -u root
-(Do not type anything)
+CREATE USER 'tib'@'localhost' IDENTIFIED BY 'pass';
+OR eventually if user already exists :
 ALTER USER 'tib'@'localhost' IDENTIFIED BY 'pass';
 FLUSH PRIVILEGES;
 pip install markdown
