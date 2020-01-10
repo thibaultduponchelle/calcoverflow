@@ -34,6 +34,7 @@ FLUSH PRIVILEGES;
 
 # Start service
 python manage.py migrate
+python manage.py createsuperuser
 python manage runserver
 ```
 

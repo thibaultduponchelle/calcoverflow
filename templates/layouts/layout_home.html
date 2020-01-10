@@ -12,8 +12,8 @@
   <title>{% block title %}{% endblock title %}</title>
 	
   {% block css %}
-  <link rel="stylesheet" type="text/css" href="/static/css/paper.css" />
-  <link rel="stylesheet" type="text/css" href="/static/css/custom.css" />
+  <!--<link rel="stylesheet" type="text/css" href="/static/css/paper.css" />-->
+  <!--<link rel="stylesheet" type="text/css" href="/static/css/custom.css" />-->
   {% endblock css%}
 
   {% block js %}
@@ -28,12 +28,16 @@
   <!-- END header -->
   {% endblock header %}
   <div style="clear:both"></div>
+  <br/>
+  <br/>
 
   <div class="row">
   <div class="col-2 col"></div>
   <div class="col-8 col border">
     {% block navigation_content %}{% include 'shared/navigation.html' %}{% endblock navigation_content %}
     <div style="clear:both"></div>
+    <br/>
+    <br/>
 
     {% block body %}
     <!-- BEGIN body -->
