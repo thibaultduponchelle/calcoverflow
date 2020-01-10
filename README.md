@@ -18,7 +18,7 @@ pip install pymysql
 # Ubuntu 18
 sudo apt-get install default-libmysqlclient-dev libmysqlclient-dev libmysqlclient20 python-mysqldb mysql-client-core-5.7 mysql-server 
 su 
-mysql -u root -p
+mysql -u root
 (Do not type anything)
 ALTER USER 'tib'@'localhost' IDENTIFIED BY 'pass';
 FLUSH PRIVILEGES;
