@@ -12,17 +12,16 @@ class Medal(models.Model):
 class Badge(models.Model):
     name = models.CharField(max_length=50)
     descritption = models.CharField(max_length=1600)
-    medal = models.ForeignKey(Medal)
+    medal = models.ForeignKey('badges.Medal', on_delete=models.PROTECT)
     bonus = models.IntegerField()
     pub_date = models.DateTimeField('date published')
 
     def __unicode__(self):
         return self.name
-
  
 class UserBadge(models.Model):
-    user = models.ForeignKey(User)
-    badge = models.ForeignKey(Badge)
+    user = models.ForeignKey(User, on_delete=models.PROTECT)
+    badge = models.ForeignKey('badges.Badge', on_delete=models.PROTECT)
     pub_date = models.DateTimeField('date published')
 
     def __unicode__(self):

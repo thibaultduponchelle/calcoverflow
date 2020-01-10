@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 
 class UserProfile(models.Model):
-    user = models.OneToOneField(User)
+    user = models.OneToOneField(User, on_delete=models.PROTECT)
 
     reputation = models.IntegerField()
     remaining_votes = models.PositiveIntegerField()

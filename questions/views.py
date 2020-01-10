@@ -7,7 +7,7 @@ from questions.models import Answer
 from questions.models import User
 from questions.postform import QuestionForm
 from questions.postform import AnswerForm
-from django.core.context_processors import csrf
+from django.template.context_processors import csrf
 import datetime
 import markdown
 from django.utils import timezone
