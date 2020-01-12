@@ -5,7 +5,6 @@ A shitty questions/answers site.
 ## Setup (python3 + django latest)
 
 ```
-
 # Setup python
 apt-get install python3-venv
 apt-get install python3-pip # Probably not needed because venv could probably do it for us (?)
