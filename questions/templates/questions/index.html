@@ -1,19 +1,17 @@
 {% extends "home.html" %}
 
 {% block main %}
-<table class="table" summary="">
-<thead>
-</thead>
-<tbody>
-{% for question in latest_question_list %}
-  <tr>
-    <td class="border">{{ question.votes }}</td>
-    <td class="border">{{ question.views }}0</td>
-    <td><a href="/questions/{{ question.id }}/" title="{{ question.content }}">{{ question.title }}</a></td>
-    <td>posted by <a href="/users/{{ question.user.id }}/">{{ question.user.username }}</a></td>
-  </tr>
-{% endfor %}
-</tbody>
+<table class="table ">
+  <tbody>
+  {% for question in latest_question_list %}
+    <tr>
+      <td>{{ question.votes }}</td>
+      <td>{{ question.views }}0</td>
+      <td><a href="/questions/{{ question.id }}/" title="{{ question.content }}">{{ question.title }}</a></td>
+      <td>posted by <a href="/users/{{ question.user.id }}/">{{ question.user.username }}</a></td>
+    </tr>
+  {% endfor %}
+  </tbody>
 </table>
 {% endblock main %}
 

@@ -12,12 +12,15 @@
   <title>{% block title %}{% endblock title %}</title>
 	
   {% block css %}
-  <!--<link rel="stylesheet" type="text/css" href="/static/css/paper.css" />-->
-  <!--<link rel="stylesheet" type="text/css" href="/static/css/custom.css" />-->
-  {% endblock css%}
+  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+  {% endblock css %}
+  {% block css.custom %}
+  {% endblock css.custom %}
 
   {% block js %}
-  {% endblock js%}
+  {% endblock js %}
+  {% block js.custom %}
+  {% endblock js.custom %}
 </head>
 {% endblock head %}
 

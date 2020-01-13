@@ -67,7 +67,7 @@ def detail(request, question_id):
 def post_answer(request, question_id):
     q = Question.objects.get(pk=question_id)
     u = User.objects.get(pk=1)
-    content = request.POST['content']
+    content = request.POST.get('content')
     a = Answer(content=content, author=u, pub_date=timezone.now(), votes=0, question_id=question_id)
     a.save()
     return detail(request, question_id)
