@@ -1,6 +1,6 @@
 # Calcoverflow
 
-A simple and ugly questions/answers proof of concept. 
+A simple and ugly questions/answers ~platform~ proof of concept. 
 Naming it somewhere else than a POC is too early ;)
 
 Some features :
