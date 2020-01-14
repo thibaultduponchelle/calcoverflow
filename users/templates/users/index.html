@@ -7,9 +7,9 @@
 {% block main %}
 <div id="content">
     <h1>Users</h1>
-    <hr class="thin-line"/>
-    <button type="button" class="btn btn-secondary">{{ user.username }}</button>
-      <div style="clear:both"></div>      
-    </div>
+    <br/>
+    {% for user in users %}
+    <button type="button" class="btn btn-outline-dark">{{ user.username }}</button>
+    {% endfor %}
 </div>
 {% endblock main %}
