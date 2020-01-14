@@ -21,7 +21,7 @@
   <div class="your-question"> Your question </div>
   <hr class="thin-line"/>
   <form action="/questions/ask/post/" method="post">{% csrf_token %}
-  {{ form.as_table }}
+  {{ form }}
   <input type="submit" value="Submit" />
 </div>
 {% endblock main %}

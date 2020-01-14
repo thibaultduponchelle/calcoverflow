@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 
 class Question(models.Model):
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=400)
     content = models.CharField(max_length=1600)
     author = models.ForeignKey(User, on_delete=models.PROTECT)
     #is_resolved = models.BooleanField()

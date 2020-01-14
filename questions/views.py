@@ -20,8 +20,8 @@ def index(request):
     for p in latest_question_list:
       p.answers = len(Answer.objects.filter(question_id=p.id))
       p.user = User.objects.get(id=p.author_id)
-      if len(p.title) > 140 :
-        p.title = p.title[:140]
+      if len(p.title) > 300 :
+        p.title = p.title[:300]
         p.title += " ..."
     template = loader.get_template('questions/index.html')
     context = { 'latest_question_list': latest_question_list, }
@@ -37,8 +37,8 @@ def unanswered(request):
     for p in latest_question_list:
       p.answers = len(Answer.objects.filter(question_id=p.id))
       p.user = User.objects.get(id=p.author_id)
-      if len(p.title) > 140 :
-        p.title = p.title[:140]
+      if len(p.title) > 300 :
+        p.title = p.title[:300]
         p.title += " ..."
     template = loader.get_template('questions/index.html')
     context = { 'latest_question_list': latest_question_list, }

@@ -18,28 +18,28 @@
 {% endblock js.custom %}
 
 {% block main %}
-<table class="table table-striped table-borderless">
+<table class="table">
   <thead class="thead-dark">
     <tr>
       <th scope="col">#</th>
       <th scope="col">{{ question.title }}</th>
-      <th scope="col">Author</th>
+      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
-    <tr class="table-secondary">
+    <tr>
       <th scope="row">{{ question.votes }}</th>
       <td> {{ question.content|safe }} </td>
       <td>posted by <a href="/users/{{ question.user.id }}/">{{ question.user.username }}</a></td>
     </tr>
     {% for answer in answers %} 
-    <tr class="table-light">
+    <tr>
       <td></td>
       <td>{{ answer.content|safe }}</td>
       <td>answered by <a href="/users/{{ question.user.id }}/">{{ question.user.username }}</a></td>
     </tr>
     {% endfor %}
-    <tr class="table-light">
+    <tr>
       <td></td>
       <td>
         <form action="/questions/{{ question.id }}/answer/" method="post">{% csrf_token %}

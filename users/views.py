@@ -21,7 +21,7 @@ def detail(request, user_id):
     user = User.objects.get(pk=user_id)
     
     template = loader.get_template('users/detail.html')
-    context = { 'users': users, }
+    context = { 'user': user, }
     return HttpResponse(template.render(context, request))
     #return render_to_response('registration/detail.html',{'user': user}, context_instance=RequestContext(request))
 
