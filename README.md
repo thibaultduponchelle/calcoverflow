@@ -1,6 +1,15 @@
 # Calcoverflow
 
-A shitty questions/answers site.
+A simple and ugly questions/answers proof of concept. 
+Naming it somewhere else than a POC is too early ;)
+
+Some features :
+- Write questions or answers in markdown format
+- Preview your content with simple but nice markitup editor
+- List recent questions, unanswered questions and users.
+- Login/logout
+- Admin panel (thanks to django admin)
+- Design migrated to bootstrap (WIP)
 
 ## Setup env
 
@@ -30,6 +39,9 @@ pip install mysqlclient
 # Install DB 
 sudo apt-get install default-libmysqlclient-dev libmysqlclient-dev libmysqlclient20 python-mysqldb
 ```
+
+Eventually edit `~/DjangoLatest/lib/python3.6/site-packages/django_registration/validators.py` to change 
+`from django.utils import six` to `import six`
 
 ### Prepare db 
 

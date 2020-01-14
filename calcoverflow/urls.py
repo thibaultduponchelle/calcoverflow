@@ -13,11 +13,9 @@ urlpatterns = [
     url('', include('badges.urls')),
     url('', include('users.urls')),
     url(r'^users/login/$', auth_views.LoginView.as_view()),
-    #url(r'^users/logout/$', auth_views.logout),
-    #url(r'^accounts/', include('registration.backends.default.urls')),
-    #url(r'^accounts/', include('django.contrib.auth.urls')),
+    url(r'^accounts/', include('django_registration.backends.activation.urls')),
+    url(r'^accounts/', include('django.contrib.auth.urls')),
     url(r'^admin/', admin.site.urls),
-    #url(r'^accounts/', include('registration.backends.default.urls')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
