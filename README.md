@@ -6,13 +6,13 @@ A simple, ugly and incomplete questions/answers platform :sweat_smile:
 
 It's a **2012 experiment**, moved from gitlab and upgraded to **python 3**, **django 3** and **bootstrap** (not finished).
 
-__Some features :__
+Some features :
 - Write questions or answers in markdown format
-- Preview your content with simple but nice markitup editor
+- Preview your content with simple but nice [Markitup editor](https://markitup.jaysalvat.com/home)
 - List recent questions, unanswered questions and users.
 - Login/logout
 - Admin panel (thanks to django admin)
-- Design migrated to bootstrap (WIP)
+- Design migrated to [Bootstrap](https://getbootstrap.com) (WIP)
 
 ## Setup env
 
@@ -43,8 +43,16 @@ pip install mysqlclient
 sudo apt-get install default-libmysqlclient-dev libmysqlclient-dev libmysqlclient20 python-mysqldb
 ```
 
-Eventually edit `~/DjangoLatest/lib/python3.6/site-packages/django_registration/validators.py` to change 
-`from django.utils import six` to `import six`
+Eventually edit `~/DjangoLatest/lib/python3.6/site-packages/django_registration/validators.py` to change :
+
+```python
+from django.utils import six``` 
+
+to 
+
+```python
+import six
+```
 
 ### Prepare db 
 
