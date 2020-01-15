@@ -2,9 +2,7 @@
 
 ## Summary
 
-A simple and ugly questions/answers ~platform~ proof of concept. 
-
-Naming it something else than a POC would be lying :stuck_out_tongue_closed_eyes:
+A simple, ugly and incomplete questions/answers platform.
 
 It's a **2012 experiment**, moved from gitlab and upgraded to **python 3**, **django 3** and **bootstrap** (not finished).
 
