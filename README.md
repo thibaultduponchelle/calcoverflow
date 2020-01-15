@@ -43,7 +43,7 @@ pip install mysqlclient
 sudo apt-get install default-libmysqlclient-dev libmysqlclient-dev libmysqlclient20 python-mysqldb
 ```
 
-Eventually edit `~/DjangoLatest/lib/python3.6/site-packages/django_registration/validators.py` to change :
+Eventually edit `~/DjangoLatest/lib/python3.6/site-packages/django_registration/validators.py` to change
 
 ```python
 from django.utils import six
