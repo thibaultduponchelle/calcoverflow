@@ -2,7 +2,7 @@
 
 ## Summary
 
-A simple, ugly and incomplete questions/answers platform.
+A simple, ugly and incomplete questions/answers platform :sweat_smile:
 
 It's a **2012 experiment**, moved from gitlab and upgraded to **python 3**, **django 3** and **bootstrap** (not finished).
 
