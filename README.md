@@ -46,7 +46,8 @@ sudo apt-get install default-libmysqlclient-dev libmysqlclient-dev libmysqlclien
 Eventually edit `~/DjangoLatest/lib/python3.6/site-packages/django_registration/validators.py` to change :
 
 ```python
-from django.utils import six``` 
+from django.utils import six
+``` 
 
 to 
 
