@@ -14,7 +14,8 @@ Some features :
 - Admin panel (thanks to django admin)
 - Design migrated to [Bootstrap](https://getbootstrap.com) (WIP)
 
-## Setup env
+## Setup
+### Python 3 and virtualenv
 
 ```bash
 # Setup python3 and deps
