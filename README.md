@@ -6,7 +6,7 @@ A simple, ugly and incomplete questions/answers platform :sweat_smile:
 
 It's a **2012 experiment**, moved from gitlab and upgraded to **python 3**, **django 3** and **bootstrap** (not finished).
 
-Some features :
+__Some features :__
 - Write questions or answers in markdown format
 - Preview your content with simple but nice markitup editor
 - List recent questions, unanswered questions and users.
